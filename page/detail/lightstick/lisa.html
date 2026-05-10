@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Tiết Sản Phẩm - Zennie Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/detail-product.css" />
+  </head>
+  <body>
+    <main class="product-container">
+      <section class="product-top-section">
+        <div class="product-image">
+          <img src="../../../images/products/lightstick/lisa.png" alt="Lisa" />
+        </div>
+
+        <div class="product-details">
+          <h1 class="product-title">LIGHTSTICK LISA</h1>
+          <div class="product-price">980.000đ</div>
+
+          <div class="qty-wrapper">
+            <span class="qty-label">Số lượng:</span>
+            <div class="qty-control">
+              <button onclick="changeQty(-1)">-</button>
+              <input type="number" id="qty-input" value="1" min="1" />
+              <button onclick="changeQty(1)">+</button>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button class="btn btn-add-cart">Thêm vào giỏ</button>
+            <button class="btn btn-buy-now">Mua ngay</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="description-section">
+        <h2 class="desc-title">Mô tả sản phẩm</h2>
+        <div class="desc-content">
+          <p>
+            Thiết kế của mẫu lightstick lần này là một tuyệt tác kết hợp giữa
+            công nghệ hiện đại và ngôn ngữ nghệ thuật đặc trưng, tạo nên một
+            biểu tượng gắn kết đầy kiêu hãnh giữa thần tượng và người hâm mộ.
+            Từng đường nét trên thân đèn đều toát lên vẻ sang trọng, tinh tế với
+            chất liệu cao cấp, mang lại cảm giác cầm nắm chắc chắn và quyền lực.
+            Đây không chỉ đơn thuần là một vật dụng cổ vũ, mà còn là một tác
+            phẩm điêu khắc ánh sáng đầy thẩm mỹ, mang trong mình linh hồn và bản
+            sắc riêng biệt của nghệ sĩ.
+          </p>
+          <p>
+            Điểm nhấn rực rỡ nhất nằm ở hệ thống ánh sáng đa sắc thông minh, có
+            khả năng biến hóa linh hoạt theo nhịp điệu và cảm xúc của từng bài
+            hát, tạo nên một biển ánh sáng kỳ ảo và choáng ngợp tại các buổi
+            trình diễn. Sự lồng ghép khéo léo các biểu tượng cá nhân vào cấu
+            trúc bên trong không chỉ thể hiện sự thấu hiểu sâu sắc dành cho cộng
+            đồng fan mà còn khẳng định sự đầu tư chỉn chu, tâm huyết đến từng
+            chi tiết nhỏ nhất. Mỗi khi ánh đèn rực sáng, nó như một sợi dây liên
+            kết vô hình nhưng mạnh mẽ, thắp lên niềm tin và sự tự hào mãnh liệt
+            trong lòng mỗi người sở hữu.
+          </p>
+          <p>
+            Sản phẩm này chính là minh chứng cho tầm nhìn vượt thời đại, nơi một
+            món đồ công nghệ được nâng tầm thành một món đồ trang sức nghệ thuật
+            đầy giá trị. Với sự hoàn hảo từ diện mạo đến công năng, mẫu
+            lightstick này xứng đáng là một "di vật" hiện đại ghi dấu những
+            khoảnh khắc thăng hoa rực rỡ nhất trên hành trình âm nhạc của thần
+            tượng. Đây thực sự là một chuẩn mực mới trong văn hóa fandom, một
+            báu vật mà bất kỳ ai cũng khao khát được nâng niu và truyền lửa
+            trong suốt chặng đường đồng hành cùng nghệ sĩ.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function changeQty(change) {
+        let input = document.getElementById("qty-input");
+        let currentValue = parseInt(input.value);
+        let newValue = currentValue + change;
+
+        if (newValue >= 1) {
+          input.value = newValue;
+        }
+      }
+    </script>
+  </body>
+</html>

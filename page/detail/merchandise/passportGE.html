@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Tiết Sản Phẩm - Zennie Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/detail-product.css" />
+  </head>
+  <body>
+    <main class="product-container">
+      <section class="product-top-section">
+        <div class="product-image">
+          <img
+            src="../../../images/products/merchandise/passportGE.jpg"
+            alt="Passport GE"
+          />
+        </div>
+
+        <div class="product-details">
+          <h1 class="product-title">Passport GIÓ EM</h1>
+          <div class="product-price">500.000đ</div>
+
+          <div class="qty-wrapper">
+            <span class="qty-label">Số lượng:</span>
+            <div class="qty-control">
+              <button onclick="changeQty(-1)">-</button>
+              <input type="number" id="qty-input" value="1" min="1" />
+              <button onclick="changeQty(1)">+</button>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button class="btn btn-add-cart">Thêm vào giỏ</button>
+            <button class="btn btn-buy-now">Mua ngay</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="description-section">
+        <h2 class="desc-title">Mô tả sản phẩm</h2>
+        <div class="desc-content">
+          <p>Gió Em khổ nhất thế giới</p>
+          <p>
+            Một đêm duy nhất tại The Global City ngày 12/04/2025 với 48 Chị Đẹp
+            cùng với nhựng màn trình diễn ấn tượng, đỉnh cao trong chương trình
+            Chị Đẹp Đạp Gió Rẽ Sóng và Chị Đẹp Đạp Gió. Một kĩ niệm khó quên
+            dành cho các Chị Đẹp và các Gió Em, người luôn yêu thương và đồng
+            hành cùng sau trong suốt hành trình đạp gió và con đường âm nhạc.
+            Cuốn passport này sẽ là món quà ý nghĩa dành cho những người yêu
+            thích Gió Em và luôn đồng hành cùng trong suốt hành trình vừa qua để
+            có thể thực hiện ước mơ tổ chức 1 đêm concert hoành tráng. Dù có
+            nhiều khó khăn nhưng không một Gió Em nào chùn bước và sẵn sàng mạnh
+            mẽ, chuyển mình rực rỡ, đạp gió thăng hoa. Một đêm duy nhất, một đêm
+            duy nhất.
+          </p>
+          <p>Quyển passport peak nhất trong lòng người hâm mộ</p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function changeQty(change) {
+        let input = document.getElementById("qty-input");
+        let currentValue = parseInt(input.value);
+        let newValue = currentValue + change;
+
+        if (newValue >= 1) {
+          input.value = newValue;
+        }
+      }
+    </script>
+  </body>
+</html>

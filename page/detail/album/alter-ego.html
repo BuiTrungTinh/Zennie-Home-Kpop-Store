@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Tiết Sản Phẩm - Zennie Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/detail-product.css" />
+  </head>
+  <body>
+    <main class="product-container">
+      <section class="product-top-section">
+        <div class="product-image">
+          <img
+            src="../../../images/products/album/alterego.jpg"
+            alt="Alter Ego"
+          />
+        </div>
+
+        <div class="product-details">
+          <h1 class="product-title">Alter Ego - Lisa</h1>
+          <div class="product-price">430.000đ</div>
+
+          <div class="qty-wrapper">
+            <span class="qty-label">Số lượng:</span>
+            <div class="qty-control">
+              <button onclick="changeQty(-1)">-</button>
+              <input type="number" id="qty-input" value="1" min="1" />
+              <button onclick="changeQty(1)">+</button>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button class="btn btn-add-cart">Thêm vào giỏ</button>
+            <button class="btn btn-buy-now">Mua ngay</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="description-section">
+        <h2 class="desc-title">Mô tả sản phẩm</h2>
+        <div class="desc-content">
+          <p>
+            "Alter Ego" của Lisa (BLACKPINK) là một dự án âm nhạc đầy đột phá,
+            đánh dấu bước ngoặt lớn trong sự nghiệp solo của "em út" nhà Hắc
+            Hường. Album không chỉ là một tập hợp các bài hát mà còn là một hành
+            trình khám phá những khía cạnh đối lập trong tâm hồn và cá tính nghệ
+            thuật của Lisa. Với thông điệp về sự tự do và lòng kiêu hãnh, album
+            khắc họa hình ảnh một nghệ sĩ đa năng, sẵn sàng phá bỏ mọi giới hạn
+            để định nghĩa lại bản thân mình trên bản đồ âm nhạc thế giới.
+          </p>
+          <p>
+            Âm nhạc trong "Alter Ego" là sự pha trộn tinh tế giữa chất Hip-hop
+            mạnh mẽ, EDM sôi động và những giai điệu Pop hiện đại, lôi cuốn. Mỗi
+            ca khúc như một mảnh ghép tạo nên bức chân dung hoàn chỉnh về Lisa:
+            khi thì sắc sảo, nổi loạn trong những đoạn rap rực lửa, khi thì
+            quyến rũ, mềm mại trong những phân đoạn vocal đầy cảm xúc. Sự đầu tư
+            chỉn chu về mặt âm thanh cùng kỹ thuật trình diễn điêu luyện đã giúp
+            album nhanh chóng thu hút sự chú ý của giới chuyên môn và người hâm
+            mộ toàn cầu, khẳng định tầm ảnh hưởng không thể chối từ của cô.
+          </p>
+          <p>
+            Về mặt hình ảnh, concept của album mang đậm hơi hướng tương lai và
+            nghệ thuật đương đại, thể hiện qua những bộ trang phục độc đáo và
+            bối cảnh được dàn dựng công phu. "Alter Ego" không chỉ dừng lại ở
+            một sản phẩm giải trí mà còn là lời khẳng định về cái tôi độc bản,
+            khuyến khích mỗi cá nhân dũng cảm thể hiện những phiên bản khác nhau
+            của chính mình. Đây chắc chắn là một dấu ấn rực rỡ, đưa tên tuổi
+            Lisa vươn xa hơn nữa với tư cách là một biểu tượng văn hóa đại chúng
+            toàn cầu.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function changeQty(change) {
+        let input = document.getElementById("qty-input");
+        let currentValue = parseInt(input.value);
+        let newValue = currentValue + change;
+
+        if (newValue >= 1) {
+          input.value = newValue;
+        }
+      }
+    </script>
+  </body>
+</html>

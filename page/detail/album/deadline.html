@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Tiết Sản Phẩm - Zennie Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/detail-product.css" />
+  </head>
+  <body>
+    <main class="product-container">
+      <section class="product-top-section">
+        <div class="product-image">
+          <img
+            src="../../../images/products/album/deadline.jpg"
+            alt="Deadline"
+          />
+        </div>
+
+        <div class="product-details">
+          <h1 class="product-title">Deadline - BLACKPINK</h1>
+          <div class="product-price">450.000đ</div>
+
+          <div class="qty-wrapper">
+            <span class="qty-label">Số lượng:</span>
+            <div class="qty-control">
+              <button onclick="changeQty(-1)">-</button>
+              <input type="number" id="qty-input" value="1" min="1" />
+              <button onclick="changeQty(1)">+</button>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button class="btn btn-add-cart">Thêm vào giỏ</button>
+            <button class="btn btn-buy-now">Mua ngay</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="description-section">
+        <h2 class="desc-title">Mô tả sản phẩm</h2>
+        <div class="desc-content">
+          <p>
+            "Deadline" là một bước đi táo bạo, đánh dấu sự trở lại đầy quyền lực
+            của BLACKPINK với phong cách âm nhạc đậm chất Cyberpunk. Album không
+            chỉ là tập hợp các bản phối Hip-hop và EDM sôi động mà còn là một
+            tuyên ngôn về bản lĩnh trước áp lực thời gian.
+          </p>
+          <p>
+            Xuyên suốt các ca khúc, tiếng tích tắc của đồng hồ được lồng ghép
+            tinh tế vào nhịp Bass dồn dập, tạo nên không gian âm nhạc kịch tính
+            và đầy lôi cuốn. Thông điệp chính của album xoay quanh việc biến
+            những "hạn chót" và kỳ vọng khắc nghiệt thành động lực để bứt phá.
+            Thay vì trốn chạy, bốn cô gái chọn cách đối mặt và tỏa sáng rực rỡ
+            nhất trước khi kim đồng hồ chạm vạch số 12.
+          </p>
+          <p>
+            Với hình ảnh ma mị và âm thanh hiện đại, "Deadline" khẳng định vị
+            thế dẫn đầu của BLACKPINK. Đây là món quà tinh thần dành cho thế hệ
+            trẻ — những người đang nỗ lực khẳng định giá trị bản thân trong nhịp
+            sống hối hả, chứng minh rằng sự rực rỡ nhất luôn xuất hiện vào những
+            khoảnh khắc quyết định.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function changeQty(change) {
+        let input = document.getElementById("qty-input");
+        let currentValue = parseInt(input.value);
+        let newValue = currentValue + change;
+
+        if (newValue >= 1) {
+          input.value = newValue;
+        }
+      }
+    </script>
+  </body>
+</html>

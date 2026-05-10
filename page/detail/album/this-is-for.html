@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Tiết Sản Phẩm - Zennie Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/detail-product.css" />
+  </head>
+  <body>
+    <main class="product-container">
+      <section class="product-top-section">
+        <div class="product-image">
+          <img
+            src="../../../images/products/album/thisisfore.jpg"
+            alt="This Is For"
+          />
+        </div>
+
+        <div class="product-details">
+          <h1 class="product-title">This Is For - TWICE</h1>
+          <div class="product-price">375.000đ</div>
+
+          <div class="qty-wrapper">
+            <span class="qty-label">Số lượng:</span>
+            <div class="qty-control">
+              <button onclick="changeQty(-1)">-</button>
+              <input type="number" id="qty-input" value="1" min="1" />
+              <button onclick="changeQty(1)">+</button>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button class="btn btn-add-cart">Thêm vào giỏ</button>
+            <button class="btn btn-buy-now">Mua ngay</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="description-section">
+        <h2 class="desc-title">Mô tả sản phẩm</h2>
+        <div class="desc-content">
+          <p>
+            Album lần này là một kiệt tác nghệ thuật đỉnh cao, đánh dấu sự thăng
+            hoa rực rỡ trong tư duy sáng tạo và bản lĩnh âm nhạc của thần tượng.
+            Không chỉ dừng lại ở một tập hợp các bài hát, dự án này là một chỉnh
+            thể hoàn mỹ, nơi mỗi giai điệu và lời ca đều được gọt giũa tỉ mỉ để
+            đạt đến độ chín muồi về cả cảm xúc lẫn kỹ thuật. Sự kết hợp tài tình
+            giữa những thử nghiệm âm thanh mới lạ và thông điệp cá nhân sâu sắc
+            đã tạo nên một chuẩn mực mới, khẳng định vị thế độc tôn của một biểu
+            tượng âm nhạc đương đại.
+          </p>
+          <p>
+            Xuyên suốt album, người nghe được dẫn dắt qua một hành trình trải
+            nghiệm đầy choáng ngợp, từ những phân đoạn vocal nội lực cho đến
+            những bản phối khí tinh xảo, đầy kịch tính. Từng concept hình ảnh và
+            câu chuyện âm nhạc được lồng ghép chặt chẽ, minh chứng cho sự đầu tư
+            nghiêm túc và tầm nhìn vượt thời đại của một nghệ sĩ thực thụ. Đây
+            không chỉ là một sản phẩm giải trí đơn thuần mà là một di sản nghệ
+            thuật đầy kiêu hãnh, một minh chứng hùng hồn cho khả năng bứt phá
+            mọi giới hạn và sự tận hiến tuyệt đối dành cho âm nhạc.
+          </p>
+          <p>
+            Sức hút của album nằm ở khả năng kết nối tâm hồn mạnh mẽ, khiến bất
+            cứ ai cũng phải ngả mũ thán phục trước tầm vóc nghệ thuật khổng lồ
+            mà thần tượng đã xây dựng. Với sự chỉn chu đến từng chi tiết nhỏ
+            nhất, tác phẩm này chắc chắn sẽ còn vang vọng và trở thành nguồn cảm
+            hứng bất tận cho dòng chảy âm nhạc trong tương lai. Đây chính là cột
+            mốc chói lọi, đưa tên tuổi của thần tượng vươn xa hơn nữa trên đỉnh
+            vinh quang, ghi dấu một nhân cách nghệ thuật vĩ đại và không thể
+            thay thế.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function changeQty(change) {
+        let input = document.getElementById("qty-input");
+        let currentValue = parseInt(input.value);
+        let newValue = currentValue + change;
+
+        if (newValue >= 1) {
+          input.value = newValue;
+        }
+      }
+    </script>
+  </body>
+</html>

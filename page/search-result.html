@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kết quả tìm kiếm - Zennie Home</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/list-product.css" />
+    <script src="../js/prod-db.js"></script>
+    <script src="../js/add-cart.js"></script>
+  </head>
+  <body>
+    <div class="container" style="padding-top: 30px">
+      <h1 id="search-title" style="margin-bottom: 30px; color: #8e2323">
+        Kết quả tìm kiếm cho: "<span id="query-text"></span>"
+      </h1>
+
+      <div id="results-grid" class="product-grid"></div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        //Lấy từ khóa
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get("q");
+
+        if (!query) return;
+
+        document.getElementById("query-text").innerText = query;
+
+        // lọc sản phẩm từ kho
+        const results = productsDatabase.filter((p) =>
+          p.name.toLowerCase().includes(query.toLowerCase()),
+        );
+
+        const grid = document.getElementById("results-grid");
+
+        // Hiển thị kết quả
+        if (results.length === 0) {
+          grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; padding: 50px; font-size: 18px;">
+                    Rất tiếc, không tìm thấy sản phẩm nào phù hợp với từ khóa của bạn.
+                </p>`;
+        } else {
+          grid.innerHTML = results
+            .map(
+              (product) => `
+                    <article class="product-card">
+                        <a href="../${product.link}" style="text-decoration: none; color: inherit;">
+                            <img class="product-img" src="../${product.img}" alt="${product.name}">
+                            <div class="product-info">
+                                <span class="product-name">${product.name}</span>
+                                <span class="product-price">${product.price}</span>
+                            </div>
+                        </a>
+                        <button class="btn-add-cart" onclick="addToCart('${product.name}', ${parseInt(product.price.replace(/\./g, ""))}, '../${product.img}')">
+                            Thêm vào giỏ hàng
+                        </button>
+                    </article>
+                `,
+            )
+            .join("");
+        }
+      });
+      function addToCart(name, price, img) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let found = cart.find((item) => item.name === name);
+        if (found) {
+          found.quantity++;
+        } else {
+          cart.push({ name, price, img, quantity: 1 });
+        }
+        localStorage.setItem("cart", JSON.stringify(cart));
+        window.parent.postMessage("cartUpdated", "*");
+        showToast("Đã thêm " + name + " vào giỏ hàng!");
+      }
+    </script>
+  </body>
+</html>

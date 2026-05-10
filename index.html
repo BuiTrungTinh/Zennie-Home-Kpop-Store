@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zennie Home - Cửa hàng KPOP</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="images/icon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/prod-db.js" defer></script>
+    <script src="js/for-index.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a href="page/home.html" target="content-frame">
+          <img
+            class="logo"
+            src="images/header/logo_zennieHome.png"
+            alt="Zennie Home Logo"
+          />
+        </a>
+        <div class="user-actions">
+          <div class="action-item">
+            <div
+              class="cart-icon-wrapper"
+              style="position: relative; display: inline-block"
+            >
+              <img
+                src="images/header/cart.png"
+                alt="Giỏ hàng"
+                style="width: 44px; height: 44px"
+              />
+              <span id="cart-badge" class="cart-badge">0</span>
+            </div>
+            <a href="page/cart.html" target="content-frame"
+              ><span>Giỏ hàng</span></a
+            >
+          </div>
+          <div class="action-item">
+            <a href="page/login/login.html" target="content-frame">
+              <img src="images/header/user.png" alt="User Icon"
+            /></a>
+            <a
+              href="page/login/login.html"
+              target="content-frame"
+              style="text-decoration: none; color: black"
+            >
+              <span>Tài khoản</span></a
+            >
+          </div>
+        </div>
+      </header>
+
+      <nav class="navigation">
+        <div class="nav-links">
+          <a href="page/home.html" target="content-frame">Home</a>
+          <a href="page/opt-album.html" target="content-frame">Album</a>
+          <a href="page/opt-lightstick.html" target="content-frame"
+            >Lightstick</a
+          >
+          <a href="page/opt-merch.html" target="content-frame">Merchandise</a>
+          <a href="page/opt-vpop.html" target="content-frame">V-pop</a>
+        </div>
+        <div
+          class="search-container"
+          style="position: relative; width: 100%; max-width: 336px"
+        >
+          <input
+            type="text"
+            class="search-bar"
+            placeholder="Tìm kiếm theo từ khoá..."
+            style="width: 100%"
+          />
+          <div id="search-results" class="search-results"></div>
+        </div>
+      </nav>
+
+      <main>
+        <iframe
+          name="content-frame"
+          src="page/home.html"
+          scrolling="no"
+          onload="resizeIframe(this, true)"
+          style="width: 100%; border: none; overflow: hidden"
+        >
+        </iframe>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-col">
+            <img
+              src="images/footer/logo-vuong.png"
+              alt="Footer Logo"
+              style="max-width: 200px"
+            />
+          </div>
+          <div class="footer-col">
+            <h3>Thông tin</h3>
+            <ul>
+              <li>
+                <a
+                  href="page/thong-tin/dieu-khoan-giao-dich.html"
+                  target="content-frame"
+                  >Điều Khoản Giao Dịch</a
+                >
+              </li>
+              <li>
+                <a
+                  href="page/thong-tin/huong-dan-thanh-toan.html"
+                  target="content-frame"
+                  >Hướng Dẫn Thanh Toán</a
+                >
+              </li>
+              <li>
+                <a
+                  href="page/thong-tin/chinh-sach-thanh-toan.html"
+                  target="content-frame"
+                  >Chính Sách Thanh Toán</a
+                >
+              </li>
+              <li>
+                <a
+                  href="page/thong-tin/chinh-sach-giao-hang.html"
+                  target="content-frame"
+                  >Chính Sách Giao Hàng</a
+                >
+              </li>
+              <li>
+                <a
+                  href="page/thong-tin/chinh-sach-bao-mat.html"
+                  target="content-frame"
+                  >Chính Sách Bảo Mật</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Sản phẩm</h3>
+            <ul>
+              <li>
+                <a href="page/opt-album.html" target="content-frame">Album</a>
+              </li>
+              <li>
+                <a href="page/opt-lightstick.html" target="content-frame"
+                  >Lightstick</a
+                >
+              </li>
+              <li>
+                <a href="page/opt-merch.html" target="content-frame"
+                  >Merchandise</a
+                >
+              </li>
+              <li>
+                <a href="page/opt-vpop.html" target="content-frame">V-pop</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <img
+              class="footer-map"
+              src="images/footer/location.png"
+              alt="Map"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p>
+            Zennie Home <br />
+            Địa chỉ: 180 Cao Lỗ, Phường Chánh Hưng, TP. Hồ Chí Minh <br />
+            Số điện thoại: 0120420251 | Email: zenniehome@gmail.com
+          </p>
+          <img
+            src="images/footer/paymethod.png"
+            alt="Social Media"
+            style="max-height: 30px"
+          />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

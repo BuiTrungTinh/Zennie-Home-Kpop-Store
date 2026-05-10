@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Tiết Sản Phẩm - Zennie Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/detail-product.css" />
+  </head>
+  <body>
+    <main class="product-container">
+      <section class="product-top-section">
+        <div class="product-image">
+          <img
+            src="../../../images/products/vpop/khongloi.png"
+            alt="Khong Loi"
+          />
+        </div>
+
+        <div class="product-details">
+          <h1 class="product-title">Không Lời - Thiều Bảo Trâm</h1>
+          <div class="product-price">250.000đ</div>
+
+          <div class="qty-wrapper">
+            <span class="qty-label">Số lượng:</span>
+            <div class="qty-control">
+              <button onclick="changeQty(-1)">-</button>
+              <input type="number" id="qty-input" value="1" min="1" />
+              <button onclick="changeQty(1)">+</button>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button class="btn btn-add-cart">Thêm vào giỏ</button>
+            <button class="btn btn-buy-now">Mua ngay</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="description-section">
+        <h2 class="desc-title">Mô tả sản phẩm</h2>
+        <div class="desc-content">
+          <p>
+            "After LIKE" của IVE là một trong những sản phẩm âm nhạc bùng nổ
+            nhất, khẳng định vị thế dẫn đầu của nhóm trong kỷ nguyên K-pop thế
+            hệ thứ tư. Tiếp nối thành công vang dội của "Eleven" và "Love Dive",
+            album này mang đến một luồng gió mới đầy tự tin và kiêu hãnh. Với
+            thông điệp hãy yêu bản thân trước khi yêu người khác, IVE đã xây
+            dựng nên một hình tượng những cô gái hiện đại, làm chủ cảm xúc và
+            không ngần ngại bày tỏ lòng mình.
+          </p>
+          <p>
+            Ca khúc chủ đề cùng tên gây ấn tượng mạnh mẽ khi sử dụng sample từ
+            bản hit huyền thoại "I Will Survive", tạo nên một sự giao thoa hoàn
+            hảo giữa nét hoài cổ của dòng nhạc Disco thập niên 70 và âm hưởng
+            Pop hiện đại. Giai điệu bắt tai kết hợp cùng đoạn rap mạnh mẽ của
+            Rei và Gaeul đã giúp bài hát nhanh chóng chiếm lĩnh các bảng xếp
+            hạng âm nhạc toàn cầu. Không chỉ dừng lại ở âm nhạc, hình ảnh của
+            album cũng được đầu tư tỉ mỉ với những gam màu rực rỡ, tượng trưng
+            cho những cung bậc cảm xúc mãnh liệt sau khi đã nảy sinh tình cảm.
+          </p>
+          <p>
+            "After LIKE" không chỉ đơn thuần là một bản nhạc bắt tai mà còn là
+            một bước tiến dài trong việc định hình phong cách "Narcissistic" đầy
+            cuốn hút của IVE. Sự kết hợp giữa giọng hát đặc trưng, vũ đạo đồng
+            đều và thần thái sang trọng của sáu thành viên đã tạo nên một tổng
+            thể hoàn mỹ, làm say lòng người hâm mộ trên toàn thế giới. Đây thực
+            sự là một cột mốc rực rỡ, chứng minh khả năng bứt phá không giới hạn
+            của nhóm trên bản đồ âm nhạc quốc tế.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function changeQty(change) {
+        let input = document.getElementById("qty-input");
+        let currentValue = parseInt(input.value);
+        let newValue = currentValue + change;
+
+        if (newValue >= 1) {
+          input.value = newValue;
+        }
+      }
+    </script>
+  </body>
+</html>

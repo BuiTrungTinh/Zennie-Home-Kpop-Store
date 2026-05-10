@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Tiết Sản Phẩm - Zennie Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/detail-product.css" />
+  </head>
+  <body>
+    <main class="product-container">
+      <section class="product-top-section">
+        <div class="product-image">
+          <img
+            src="../../../images/products/vpop/yesteryear.jpeg"
+            alt="Yesteryear"
+          />
+        </div>
+
+        <div class="product-details">
+          <h1 class="product-title">Yesteryear - PHÙNG KHÁNH LINH</h1>
+          <div class="product-price">420.000đ</div>
+
+          <div class="qty-wrapper">
+            <span class="qty-label">Số lượng:</span>
+            <div class="qty-control">
+              <button onclick="changeQty(-1)">-</button>
+              <input type="number" id="qty-input" value="1" min="1" />
+              <button onclick="changeQty(1)">+</button>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button class="btn btn-add-cart">Thêm vào giỏ</button>
+            <button class="btn btn-buy-now">Mua ngay</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="description-section">
+        <h2 class="desc-title">Mô tả sản phẩm</h2>
+        <div class="desc-content">
+          <p>
+            Dự án âm nhạc lần này là một cột mốc rực rỡ, đánh dấu sự thăng hoa
+            của tư duy nghệ thuật và bản sắc âm nhạc Việt Nam trong thời đại
+            mới. Không chỉ dừng lại ở một album nhạc, đây là một chỉnh thể hoàn
+            mỹ, nơi những giá trị truyền thống được kết hợp tinh tế cùng hơi thở
+            hiện đại của dòng chảy quốc tế. Mỗi giai điệu, lời ca cho đến kỹ
+            thuật dàn dựng âm thanh đều toát lên khí chất của một nghệ sĩ thực
+            thụ, khẳng định vị thế độc tôn và tầm vóc dẫn đầu của thần tượng
+            trên bản đồ Vpop đương đại.
+          </p>
+          <p>
+            Xuyên suốt album là một hành trình trải nghiệm đầy choáng ngợp, dẫn
+            dắt người nghe đi từ những cung bậc cảm xúc sâu lắng, tự sự đến
+            những bản phối khí bùng nổ, đầy kịch tính. Sự đầu tư chỉn chu vào
+            từng bản phối và cách xử lý vocal điêu luyện đã tạo nên một chuẩn
+            mực mới, khiến mỗi bài hát đều trở thành một tác phẩm nghệ thuật độc
+            lập nhưng vẫn gắn kết chặt chẽ trong một câu chuyện tổng thể. Đây
+            chính là minh chứng hùng hồn nhất cho sự tận hiến và khả năng sáng
+            tạo không giới hạn, một bước tiến dài đưa âm nhạc Việt vươn tầm và
+            chạm đến trái tim của đông đảo công chúng.
+          </p>
+          <p>
+            Sức hút của album còn nằm ở tầm nhìn vượt thời đại, khi mỗi concept
+            hình ảnh và thông điệp truyền tải đều mang đậm dấu ấn cá nhân không
+            thể trộn lẫn. Tác phẩm này không chỉ đáp ứng sự kỳ vọng của người
+            hâm mộ mà còn là một di sản âm nhạc đầy tự hào, một minh chứng cho
+            sự bứt phá ngoạn mục khỏi mọi rào cản và định kiến. Với sự hoàn hảo
+            đến từng chi tiết nhỏ nhất, album chắc chắn sẽ trở thành một biểu
+            tượng trường tồn, một báu vật tinh thần ghi dấu ấn chói lọi trên
+            đỉnh vinh quang âm nhạc của thần tượng.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function changeQty(change) {
+        let input = document.getElementById("qty-input");
+        let currentValue = parseInt(input.value);
+        let newValue = currentValue + change;
+
+        if (newValue >= 1) {
+          input.value = newValue;
+        }
+      }
+    </script>
+  </body>
+</html>

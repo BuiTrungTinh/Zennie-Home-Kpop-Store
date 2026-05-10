@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fbebeb;
+  color: black;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 40px 30px;
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product-img {
+  width: 100%;
+  aspect-ratio: 1 / 1.02;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.product-info {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 15px;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.product-name {
+  text-transform: uppercase;
+}
+
+.product-price {
+  margin-top: 5px;
+  color: #f37878;
+}
+
+.btn-add-cart {
+  background-color: #f6c8c8;
+  width: 100%;
+  max-width: 322px;
+  height: 49px;
+  border: none;
+  border-radius: 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: auto;
+}
+
+.btn-add-cart:hover {
+  background-color: #f37878;
+  color: white;
+}
+.product-name a {
+  text-decoration: none;
+  color: black;
+}
+.toast-notification {
+  position: fixed;
+  top: 80px;
+  right: 30px;
+  background-color: #ffffff;
+  color: #333;
+  border-left: 5px solid #e97c7c;
+  padding: 16px 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  z-index: 99999;
+
+  transform: translateX(150%);
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.toast-notification.show {
+  transform: translateX(0);
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px;
+  }
+  .product-name a,
+  .product-name {
+    font-size: 14px !important;
+    line-height: 1.4;
+  }
+
+  .product-price {
+    font-size: 14px !important;
+    margin-bottom: 10px;
+  }
+
+  .btn-add-cart {
+    font-size: 12px !important;
+    padding: 8px 5px !important;
+  }
+}

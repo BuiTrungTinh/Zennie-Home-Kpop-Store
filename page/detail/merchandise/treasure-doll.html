@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Tiết Sản Phẩm - Zennie Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/detail-product.css" />
+  </head>
+  <body>
+    <main class="product-container">
+      <section class="product-top-section">
+        <div class="product-image">
+          <img
+            src="../../../images/products/Home/plushdoll.png"
+            alt="Treasure Doll"
+          />
+        </div>
+
+        <div class="product-details">
+          <h1 class="product-title">Treasure PLush Doll</h1>
+          <div class="product-price">600.000đ</div>
+
+          <div class="qty-wrapper">
+            <span class="qty-label">Số lượng:</span>
+            <div class="qty-control">
+              <button onclick="changeQty(-1)">-</button>
+              <input type="number" id="qty-input" value="1" min="1" />
+              <button onclick="changeQty(1)">+</button>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button class="btn btn-add-cart">Thêm vào giỏ</button>
+            <button class="btn btn-buy-now">Mua ngay</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="description-section">
+        <h2 class="desc-title">Mô tả sản phẩm</h2>
+        <div class="desc-content">
+          <p>
+            Sản phẩm merchandise lần này là sự kết tinh hoàn hảo giữa tính ứng
+            dụng đời thường và ngôn ngữ nghệ thuật đặc trưng, biến mỗi vật phẩm
+            thành một biểu tượng gắn kết đầy kiêu hãnh. Từ những món đồ mang
+            tính thời trang, phụ kiện cá nhân cho đến những vật phẩm trưng bày
+            tinh xảo, tất cả đều được chế tác trên nền chất liệu tuyển chọn với
+            độ hoàn thiện cực kỳ cao. Mỗi chi tiết nhỏ từ chất liệu, đường nét
+            đến các biểu tượng đặc trưng đều toát lên vẻ sang trọng, phản ánh
+            chính xác tư duy thẩm mỹ tinh tế và tầm nhìn sáng tạo độc bản của
+            thần tượng.
+          </p>
+          <p>
+            Điểm nhấn giá trị nhất nằm ở khả năng cá nhân hóa trải nghiệm, giúp
+            những món đồ đồng hành hằng ngày hay vật phẩm lưu niệm đều mang một
+            sức sống riêng. Sự lồng ghép khéo léo các ký hiệu ý nghĩa vào từng
+            cấu trúc sản phẩm không chỉ tạo nên giá trị sưu tầm vô giá mà còn
+            khẳng định phong cách sống đẳng cấp của người sở hữu. Đây không chỉ
+            đơn thuần là một món đồ sử dụng thông thường, mà là một mảnh ghép
+            tâm hồn, giúp người hâm mộ cảm nhận được sự hiện diện và đồng điệu
+            mạnh mẽ với nghệ sĩ trong mọi khoảnh khắc của cuộc sống.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function changeQty(change) {
+        let input = document.getElementById("qty-input");
+        let currentValue = parseInt(input.value);
+        let newValue = currentValue + change;
+
+        if (newValue >= 1) {
+          input.value = newValue;
+        }
+      }
+    </script>
+  </body>
+</html>
