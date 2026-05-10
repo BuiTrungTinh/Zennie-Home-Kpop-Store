@@ -1,4 +1,4 @@
-function addToCart(name, price, img) {
+function addToCart(name, price, img, quantity = 1) {
   // Lấy giỏ hàng hiện tại từ localStorage
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -6,17 +6,18 @@ function addToCart(name, price, img) {
   let productIndex = cart.findIndex((item) => item.name === name);
 
   if (productIndex > -1) {
-    cart[productIndex].quantity += 1;
+    // Nếu tồn tại, cộng thêm số lượng mới vào số lượng cũ
+    cart[productIndex].quantity += quantity;
   } else {
-    cart.push({ name, price, img, quantity: 1 });
+    // Nếu chưa có, thêm mới với số lượng tương ứng
+    cart.push({ name, price, img, quantity: quantity });
   }
 
   // Lưu lại vào localStorage
   localStorage.setItem("cart", JSON.stringify(cart));
 
-  // Báo cho trang index.html cập nhật lại số lượng trên Header
+  // Thông báo cập nhật (giữ nguyên code cũ của bạn)
   window.parent.postMessage("cartUpdated", "*");
-
   showToast("Đã thêm " + name + " vào giỏ hàng!");
 }
 // tạo thông báo góc phải

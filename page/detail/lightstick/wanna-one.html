@@ -14,7 +14,10 @@
     <main class="product-container">
       <section class="product-top-section">
         <div class="product-image">
-          <img src="../../../images/products/lightstick/w1.jpg" alt="Wanna One" />
+          <img
+            src="../../../images/products/lightstick/w1.jpg"
+            alt="Wanna One"
+          />
         </div>
 
         <div class="product-details">
@@ -31,7 +34,19 @@
           </div>
 
           <div class="action-buttons">
-            <button class="btn btn-add-cart">Thêm vào giỏ</button>
+            <button
+              class="btn btn-add-cart"
+              onclick="
+                addtocart(
+                  'LIGHTSTICK WANNA ONE',
+                  905000,
+                  '../../../images/products/lightstick/w1.jpg',
+                  parseInt(document.getElementById('qty-input').value),
+                )
+              "
+            >
+              Thêm vào giỏ
+            </button>
             <button class="btn btn-buy-now">Mua ngay</button>
           </div>
         </div>
@@ -75,12 +90,14 @@
       </section>
     </main>
 
+    <script src="../../../js/add-cart.js"></script>
     <script>
       function changeQty(change) {
         let input = document.getElementById("qty-input");
         let currentValue = parseInt(input.value);
         let newValue = currentValue + change;
 
+        // Đảm bảo số lượng không dưới 1
         if (newValue >= 1) {
           input.value = newValue;
         }
