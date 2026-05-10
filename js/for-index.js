@@ -24,11 +24,19 @@ function resizeIframe(iframe, isNewLoad = false) {
     }
   }, 100);
 }
+//load về đầu trang
+let lastWindowWidth = window.innerWidth;
 
 window.addEventListener("resize", function () {
-  const iframe = document.getElementsByName("content-frame")[0];
-  if (iframe) {
-    resizeIframe(iframe, false);
+  const currentWidth = window.innerWidth;
+
+  // chạy lại nếu có sự thay đổi về chiều rộng
+  if (currentWidth !== lastWindowWidth) {
+    const iframe = document.getElementsByName("content-frame")[0];
+    if (iframe) {
+      resizeIframe(iframe, false);
+    }
+    lastWindowWidth = currentWidth;
   }
 });
 
