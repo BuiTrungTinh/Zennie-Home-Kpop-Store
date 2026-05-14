@@ -1,0 +1,22 @@
+.top-bar{
+    background-color: #000;
+    border: 2px solid;
+    height: 40px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: left;
+
+}
+.top-bar a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 100px;
+    height: 40px;
+    
+}
+.top-bar a:hover{
+    background-color: lightblue;
+    color: #000;
+}

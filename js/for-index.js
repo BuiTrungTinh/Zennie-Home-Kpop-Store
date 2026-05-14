@@ -58,7 +58,6 @@ const searchInput = document.querySelector(".search-bar");
 const searchResultsBox = document.getElementById("search-results");
 
 if (searchInput && searchResultsBox) {
-  // 3.1: Hiện  gợi ý
   searchInput.addEventListener("input", function (e) {
     const keyword = e.target.value.toLowerCase().trim();
 
@@ -95,7 +94,6 @@ if (searchInput && searchResultsBox) {
     searchResultsBox.style.display = "block";
   });
 
-  // 3.2:NHẤN ENTER -> Chuyển trang kết quả
   searchInput.addEventListener("keydown", function (e) {
     if (e.key === "Enter") {
       const keyword = e.target.value.trim();
@@ -116,7 +114,6 @@ function closeSearch() {
   }
 }
 
-// Đóng hộp kết quả nếu người dùng click ra vùng trống ngoài
 document.addEventListener("click", function (e) {
   if (
     searchInput &&
@@ -128,7 +125,6 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// 4. tín hiệu cập nhật giỏ hàng từ trang con
 window.addEventListener("message", function (event) {
   if (event.data === "cartUpdated") {
     updateCartBadge();
@@ -136,3 +132,26 @@ window.addEventListener("message", function (event) {
 });
 
 window.addEventListener("DOMContentLoaded", updateCartBadge);
+
+//show menu
+const categoryToggle = document.getElementById("category-toggle");
+const categoryDropdown = document.getElementById("category-dropdown");
+const categoryMenu = document.querySelector(".category-menu");
+
+if (categoryToggle && categoryDropdown && categoryMenu) {
+  categoryToggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    categoryDropdown.classList.toggle("show");
+    categoryMenu.classList.toggle("active");
+  });
+
+  document.addEventListener("click", function (e) {
+    if (
+      !categoryToggle.contains(e.target) &&
+      !categoryDropdown.contains(e.target)
+    ) {
+      categoryDropdown.classList.remove("show");
+      categoryMenu.classList.remove("active");
+    }
+  });
+}

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liên Hệ - Zennie Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/contact.css" />
+  </head>
+  <body>
+    <main class="contact-container">
+      <h1>LIÊN HỆ VỚI CHÚNG TÔI</h1>
+      <p class="subtext">
+        Đội ngũ Zennie Home luôn sẵn sàng lắng nghe ý kiến và hỗ trợ bạn.
+      </p>
+
+      <form id="contactForm" onsubmit="return validateContactForm(event);">
+        <div class="contact-grid">
+          <div class="input-group">
+            <label>Họ và tên:</label>
+            <div class="input-wrapper">
+              <input type="text" id="nameInput" placeholder="Tên của bạn..." />
+              <div class="error-message" id="nameError"></div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Số điện thoại:</label>
+            <div class="input-wrapper">
+              <input
+                type="tel"
+                id="phoneInput"
+                placeholder="Số điện thoại..."
+              />
+              <div class="error-message" id="phoneError"></div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Email:</label>
+            <div class="input-wrapper">
+              <input
+                type="text"
+                id="emailInput"
+                placeholder="Địa chỉ email..."
+              />
+              <div class="error-message" id="emailError"></div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Tiêu đề:</label>
+            <div class="input-wrapper">
+              <input
+                type="text"
+                id="subjectInput"
+                placeholder="Chủ đề (Tùy chọn)"
+              />
+              <div class="error-message" id="subjectError"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-group" style="display: block">
+          <label style="display: block; width: 100%; padding-bottom: 10px"
+            >Lời nhắn:</label
+          >
+          <div class="input-wrapper">
+            <textarea
+              id="messageInput"
+              placeholder="Nội dung lời nhắn..."
+            ></textarea>
+            <div class="error-message" id="messageError"></div>
+          </div>
+        </div>
+
+        <div class="submit-container">
+          <button type="submit" class="btn-submit">Gửi lời nhắn</button>
+        </div>
+      </form>
+    </main>
+
+    <script src="../js/form.js"></script>
+  </body>
+</html>

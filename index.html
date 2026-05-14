@@ -10,6 +10,7 @@
     />
     <link rel="icon" type="image/x-icon" href="images/icon.png" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="js/prod-db.js" defer></script>
     <script src="js/for-index.js" defer></script>
   </head>
@@ -56,26 +57,41 @@
       </header>
 
       <nav class="navigation">
-        <div class="nav-links">
-          <a href="page/home.html" target="content-frame">Home</a>
+<div class="nav-links">
+          <div class="category-menu">
+            <div class="category-toggle-btn" id="category-toggle">
+              <i class="fas fa-bars"></i>
+              <span>Thông tin</span>
+            </div>
+            <div class="category-dropdown" id="category-dropdown">
+              <a href="page/home.html" target="content-frame">Home</a>
+              <a href="page/about.html" target="content-frame">About Us</a>
+              <a href="page/contact.html" target="content-frame">Contact</a>
+            </div>
+          </div>
+
+          <a href="page/home.html" class="mobile-link" target="content-frame">Home</a>
+          <a href="page/about.html" class="mobile-link" target="content-frame">About Us</a>
+          <a href="page/contact.html" class="mobile-link" target="content-frame">Contact</a>
+
           <a href="page/opt-album.html" target="content-frame">Album</a>
-          <a href="page/opt-lightstick.html" target="content-frame"
-            >Lightstick</a
-          >
+          <a href="page/opt-lightstick.html" target="content-frame">Lightstick</a>
           <a href="page/opt-merch.html" target="content-frame">Merchandise</a>
           <a href="page/opt-vpop.html" target="content-frame">V-pop</a>
+          <a href="page/lab-thuc-hanh.html" target="content-frame">Lab Thực hành</a>
         </div>
-        <div
-          class="search-container"
-          style="position: relative; width: 100%; max-width: 336px"
-        >
-          <input
-            type="text"
-            class="search-bar"
-            placeholder="Tìm kiếm theo từ khoá..."
-            style="width: 100%"
-          />
-          <div id="search-results" class="search-results"></div>
+        <div class="search-container" style="position: relative; width: 100%; max-width: 336px">
+              <input
+              type="text"
+              class="search-bar"
+              placeholder="Tìm kiếm theo từ khoá..."
+              style="width: 100%"
+              />
+              
+              <i class="fa fa-search search-icon"></i>
+              
+              <div id="search-results" class="search-results"></div>
+          </div>
         </div>
       </nav>
 
@@ -187,5 +203,6 @@
         </div>
       </div>
     </footer>
+    
   </body>
 </html>

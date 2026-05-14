@@ -7,14 +7,128 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <img
-      class="main-banner"
-      src="../images/products/Home/blackpink-pinkvenom.png"
-      alt="Main Banner"
-    />
+    <div class="slide-container">
+      <div class="slide fade">
+        <img
+          src="../images/products/Home/slide/blackpink.jpg"
+          style="width: 100%"
+        />
+      </div>
+      <div class="slide fade">
+        <img
+          src="../images/products/Home/slide/cau-duyen.jpg"
+          style="width: 100%"
+        />
+      </div>
+      <div class="slide fade">
+        <img
+          src="../images/products/Home/slide/cqnyc.jpg"
+          style="width: 100%"
+        />
+      </div>
+      <div class="slide fade">
+        <img src="../images/products/Home/slide/mcl.jpg" style="width: 100%" />
+      </div>
+      <div class="slide fade">
+        <img
+          src="../images/products/Home/slide/mnhtn.jpg"
+          style="width: 100%"
+        />
+      </div>
+      <div class="slide fade">
+        <img
+          src="../images/products/Home/slide/tcnnt.jpg"
+          style="width: 100%"
+        />
+      </div>
+      <div class="slide fade">
+        <img
+          src="../images/products/Home/slide/uprize.jpg"
+          style="width: 100%"
+        />
+      </div>
+      <div class="slide fade">
+        <img
+          src="../images/products/Home/slide/uprize2.jpg"
+          style="width: 100%"
+        />
+      </div>
+      <div class="slide fade">
+        <img
+          src="../images/products/Home/slide/bomhengio.jpg"
+          style="width: 100%"
+        />
+      </div>
+      <div class="slide fade">
+        <img src="../images/products/Home/slide/coxl.jpg" style="width: 100%" />
+      </div>
+      <div class="slide fade">
+        <img
+          src="../images/products/Home/slide/divenha.jpg"
+          style="width: 100%"
+        />
+      </div>
+      <div class="slide fade">
+        <img
+          src="../images/products/Home/slide/dtoebgdn.jpg"
+          style="width: 100%"
+        />
+      </div>
+      <div class="slide fade">
+        <img src="../images/products/Home/slide/gmt.jpg" style="width: 100%" />
+      </div>
+      <div class="slide fade">
+        <img src="../images/products/Home/slide/hot.jpg" style="width: 100%" />
+      </div>
+      <div class="slide fade">
+        <img src="../images/products/Home/slide/ilo.jpg" style="width: 100%" />
+      </div>
+      <div class="slide fade">
+        <img
+          src="../images/products/Home/slide/luotsong.jpg"
+          style="width: 100%"
+        />
+      </div>
+      <div class="slide fade">
+        <img src="../images/products/Home/slide/vm.jpg" style="width: 100%" />
+      </div>
+      <div class="slide fade">
+        <img
+          src="../images/products/Home/slide/tinhca.jpg"
+          style="width: 100%"
+        />
+      </div>
+      <div class="slide fade">
+        <img src="../images/products/Home/slide/tgcl.jpg" style="width: 100%" />
+      </div>
+      <div class="slide fade">
+        <img src="../images/products/Home/slide/smtt.jpg" style="width: 100%" />
+      </div>
+      <div class="slide fade">
+        <img
+          src="../images/products/Home/slide/neuanhlaem.jpg"
+          style="width: 100%"
+        />
+      </div>
+      <div class="slide fade">
+        <img
+          src="../images/products/Home/slide/mongyuu.jpg"
+          style="width: 100%"
+        />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)"><</a>
+      <a class="next" onclick="plusSlides(1)">></a>
+    </div>
     <div class="sub-banners">
-      <img src="../images/products/Home/universe-nct.png" alt="Promo 1" />
-      <img src="../images/products/Home/LoveDive.jpg" alt="Promo 2" />
+      <img
+        src="../images/products/Home/universe-nct.png"
+        style="padding-left: 25px"
+      />
+      <img
+        src="../images/products/Home/LoveDive.jpg"
+        style="padding-right: 25px"
+      />
     </div>
 
     <section>
@@ -355,5 +469,30 @@
       </div>
     </section>
     <script src="../js/add-cart.js"></script>
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+      }
+      setInterval(function () {
+        plusSlides(1);
+      }, 5000);
+    </script>
   </body>
 </html>
