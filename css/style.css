@@ -177,6 +177,7 @@ img {
   cursor: pointer;
   width: 100%;
   transition: background 0.3s;
+  margin-top: auto;
 }
 
 .btn-add-cart:hover {
