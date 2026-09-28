@@ -60,3 +60,14 @@ function validateNum(num) {
   var numRegex = /^(0|84)([0-9]{9})$/;
   return numRegex.test(num);
 }
+
+function clearForm() {
+  // 1. Dùng lệnh reset() có sẵn để xóa mọi dữ liệu trong các ô input/textarea
+  document.getElementById("contactForm").reset();
+
+  // 2. Tìm và xóa luôn các dòng thông báo lỗi màu đỏ (nếu có)
+  const errorMessages = document.querySelectorAll(".error-message");
+  errorMessages.forEach(function (errorDiv) {
+    errorDiv.innerText = "";
+  });
+}
